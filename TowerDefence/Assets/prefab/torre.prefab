@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6400644543572993858}
   - component: {fileID: -1284034463035256373}
   - component: {fileID: -5314552477551445316}
+  - component: {fileID: 117577156796757366}
   m_Layer: 8
   m_Name: torre
   m_TagString: Untagged
@@ -158,7 +159,21 @@ MonoBehaviour:
   GoBullet: {fileID: 6026055996865780424, guid: 9b4c64068e65abf41b1b9fa0cbf69f52, type: 3}
   arma: {fileID: 5239339005465730836}
   firetime: 0
-  sps: 2
+  sps: 5
+--- !u!114 &117577156796757366
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1349237851938054927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 659ff0a1dafb8a949b506e33ba6cf3e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  initialHealth: 10
+  maxHealth: 10
 --- !u!1 &6911776737567505338
 GameObject:
   m_ObjectHideFlags: 0

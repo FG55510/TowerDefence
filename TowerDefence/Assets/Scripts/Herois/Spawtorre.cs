@@ -7,8 +7,12 @@ using UnityEngine;
 public class Spawtorre : MonoBehaviour
 {
     public bool modoheroi;
+
+    public bool modobardo;
     public GameObject torre;
     public GameObject heroi;
+
+    public GameObject bardo;
    /* Vector3 mousepos;
 
     Collider2D co;
@@ -38,6 +42,22 @@ public class Spawtorre : MonoBehaviour
     // Update is called once per frame
 
     void Update(){
+        if(Input.GetKeyDown(KeyCode.M)){
+            modobardo = !modobardo;
+        }
+        if(modobardo){
+            if (Input.GetMouseButtonDown(0)){
+
+                RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero, math.INFINITY, spawtorre);
+
+                if(hit.collider)
+                {
+                    Debug.Log ("Target Position: " + hit.collider.gameObject.transform.position);
+                    hit.collider.gameObject.layer = LayerMask.NameToLayer("Ocupado");
+                    Instantiate(bardo, hit.collider.gameObject.transform.position, Quaternion.identity, hit.collider.gameObject.transform);
+                }
+            }
+        }
         if (modoheroi){
             if (Input.GetMouseButtonDown(0)){
 

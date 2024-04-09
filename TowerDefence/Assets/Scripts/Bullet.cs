@@ -8,12 +8,12 @@ public class Bullet : MonoBehaviour
 {
 
     public float moveSpeed = 5f; // Speed at which the object moves towards the target
-    private Transform targetTransform; // The target transform to move towards
+    public Transform targetTransform; // The target transform to move towards
 
     public float dano = 5;
 
     public LayerMask enemylayer;
-
+    
     void Update()
     {
         // Check if target transform is assigned
@@ -37,6 +37,9 @@ public class Bullet : MonoBehaviour
                 enemy.DealDamage(dano);
                 Destroy(gameObject);
             }
+        }
+        else{
+            Destroy(gameObject);
         }
         
     }

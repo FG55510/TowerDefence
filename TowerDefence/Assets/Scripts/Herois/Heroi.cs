@@ -64,7 +64,7 @@ public class Heroi : MonoBehaviour
 			target = null;
 		}
 	}
-    void LockOnTarget ()
+    /*void LockOnTarget ()
 	{
         float angle = Mathf.Atan2(target.position.y - transform.position.y, target.position.x - transform.position.x) 
         * Mathf.Rad2Deg - 90f;
@@ -72,7 +72,7 @@ public class Heroi : MonoBehaviour
         Quaternion targetrotation = Quaternion.Euler(new Vector3(0f,0f, angle));
         transform.rotation = Quaternion.RotateTowards(transform.rotation, targetrotation, rotationspeed * Time.deltaTime);
 		
-	}
+	}*/
 
     // Update is called once per frame
     void Update()
@@ -84,7 +84,7 @@ public class Heroi : MonoBehaviour
             return;
         }
         else{
-            LockOnTarget();
+            //LockOnTarget();
             firetime += Time.deltaTime;
 
             if(firetime >= 1f/ sps){

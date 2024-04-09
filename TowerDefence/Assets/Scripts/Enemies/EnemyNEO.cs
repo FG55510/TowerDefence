@@ -14,6 +14,7 @@ public class EnemyNEO : MonoBehaviour
     public Vector3 CurrentPointPosition => Waypoint.GetWaypointPosition(_currentWaypointIndex);
 
     private int _currentWaypointIndex;
+    
     private Vector3 _lastPointPos;
 
     private EnemyHealth _enemyHealth;
