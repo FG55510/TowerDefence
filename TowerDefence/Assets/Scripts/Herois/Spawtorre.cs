@@ -58,6 +58,7 @@ public class Spawtorre : MonoBehaviour
                 }
             }
         }
+        else {
         if (modoheroi){
             if (Input.GetMouseButtonDown(0)){
 
@@ -84,6 +85,8 @@ public class Spawtorre : MonoBehaviour
                 }
             }
         }
+        }
+        
         if(Input.GetKeyDown(KeyCode.Q)){
             modoheroi = !modoheroi;
         }

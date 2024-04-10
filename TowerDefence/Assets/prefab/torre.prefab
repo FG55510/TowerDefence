@@ -159,7 +159,7 @@ MonoBehaviour:
   GoBullet: {fileID: 6026055996865780424, guid: 9b4c64068e65abf41b1b9fa0cbf69f52, type: 3}
   arma: {fileID: 5239339005465730836}
   firetime: 0
-  sps: 5
+  sps: 10
 --- !u!114 &117577156796757366
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -172,6 +172,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 659ff0a1dafb8a949b506e33ba6cf3e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tipo: 0
   initialHealth: 10
   maxHealth: 10
 --- !u!1 &6911776737567505338

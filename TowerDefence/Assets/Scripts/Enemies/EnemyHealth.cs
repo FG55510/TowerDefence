@@ -4,9 +4,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+public enum Tipodeobjecto{
+    Heroi_Torre,
+    Inimigo
+}
+
 public class EnemyHealth : MonoBehaviour
 {
     public static Action OnEnemyKilled;
+
+    public Tipodeobjecto tipo;
 
    // [SerializeField] private GameObject healthBarPrefab;
    // [SerializeField] private Transform barPos;
@@ -50,7 +57,13 @@ public class EnemyHealth : MonoBehaviour
         if (CurrentHealth <= 0)
         {
             CurrentHealth = 0;
-            Die();
+            if(tipo == Tipodeobjecto.Inimigo){
+                Die();
+            }
+            else{
+                Morte();
+            }
+            
         }
     }
 
@@ -65,5 +78,9 @@ public class EnemyHealth : MonoBehaviour
         ResetHealth();
         OnEnemyKilled?.Invoke();
         ObjectPooler.ReturnToPool(gameObject);
+    }
+
+    private void Morte(){
+        Destroy(gameObject);
     }
 }
