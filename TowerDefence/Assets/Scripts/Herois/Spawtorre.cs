@@ -9,6 +9,7 @@ public class Spawtorre : MonoBehaviour
     public bool modoheroi;
 
     public bool modobardo;
+
     public GameObject torre;
     public GameObject heroi;
 
@@ -66,7 +67,7 @@ public class Spawtorre : MonoBehaviour
 
                 if(hit.collider)
                 {
-                    Debug.Log ("Target Position: " + hit.collider.gameObject.transform.position);
+                   // Debug.Log ("Target Position: " + hit.collider.gameObject.transform.position);
                     hit.collider.gameObject.layer = LayerMask.NameToLayer("Ocupado");
                     Instantiate(heroi, hit.collider.gameObject.transform.position, Quaternion.identity, hit.collider.gameObject.transform);
                 }
@@ -79,10 +80,11 @@ public class Spawtorre : MonoBehaviour
 
                 if(hit.collider)
                 {
-                    Debug.Log ("Target Position: " + hit.collider.gameObject.transform.position);
+                  //  Debug.Log ("Target Position: " + hit.collider.gameObject.transform.position);
                     hit.collider.gameObject.layer = LayerMask.NameToLayer("Ocupado");
                     Instantiate(torre, hit.collider.gameObject.transform.position, Quaternion.identity, hit.collider.gameObject.transform);
                 }
+
             }
         }
         }
@@ -91,8 +93,7 @@ public class Spawtorre : MonoBehaviour
             modoheroi = !modoheroi;
         }
         
-        
-        }
+    }
        /* if (temtorre == false){
             if(Input.GetKeyDown(KeyCode.Mouse0)){
                 mousepos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -104,6 +105,8 @@ public class Spawtorre : MonoBehaviour
             }
         }*/
 
-        
+
+
+
 }
 

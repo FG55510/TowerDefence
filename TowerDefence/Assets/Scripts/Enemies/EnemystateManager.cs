@@ -19,7 +19,7 @@ public class EnemystateManager : MonoBehaviour
 
 
     public Transform target;
-    public int range = 4;
+    public float range = 1.5f;
     public LayerMask Torres;
 
     public bool miraativa = false;

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: -1284034463035256373}
   - component: {fileID: -5314552477551445316}
   - component: {fileID: 117577156796757366}
+  - component: {fileID: 3210583764128382397}
   m_Layer: 8
   m_Name: torre
   m_TagString: Untagged
@@ -30,7 +31,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -16.536964, y: -4.4357977, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.8052308, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5239339005465730836}
@@ -129,7 +130,7 @@ BoxCollider2D:
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
-  m_AutoTiling: 0
+  m_AutoTiling: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
@@ -151,7 +152,7 @@ MonoBehaviour:
   dano: 0
   vida: 0
   target: {fileID: 0}
-  range: 2
+  range: 5
   Inimigos:
     serializedVersion: 2
     m_Bits: 0
@@ -172,9 +173,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 659ff0a1dafb8a949b506e33ba6cf3e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mlp: {fileID: 0}
   tipo: 0
   initialHealth: 10
   maxHealth: 10
+--- !u!114 &3210583764128382397
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1349237851938054927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87cfaafe1bac32f488e6723139222f5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tipo: 1
 --- !u!1 &6911776737567505338
 GameObject:
   m_ObjectHideFlags: 0

@@ -12,6 +12,7 @@ public enum Tipodeobjecto{
 public class EnemyHealth : MonoBehaviour
 {
     public static Action OnEnemyKilled;
+    public MudarLayerParent mlp;
 
     public Tipodeobjecto tipo;
 
@@ -30,6 +31,7 @@ public class EnemyHealth : MonoBehaviour
     {
        // CreateHealthBar();
         CurrentHealth = initialHealth;
+        mlp = GetComponent <MudarLayerParent>();
     }
 
     private void Update()
@@ -80,7 +82,12 @@ public class EnemyHealth : MonoBehaviour
         ObjectPooler.ReturnToPool(gameObject);
     }
 
-    private void Morte(){
+    private void Morte()
+    {  
+        mlp.Final();
         Destroy(gameObject);
+
     }
 }
+
+

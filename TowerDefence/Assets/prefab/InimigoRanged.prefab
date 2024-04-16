@@ -201,7 +201,7 @@ MonoBehaviour:
   ataque: {fileID: 0}
   indexpause: 0
   target: {fileID: 0}
-  range: 2
+  range: 10
   Torres:
     serializedVersion: 2
     m_Bits: 256

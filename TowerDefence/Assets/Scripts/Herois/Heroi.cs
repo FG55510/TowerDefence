@@ -12,7 +12,7 @@ public class Heroi : MonoBehaviour
     public int dano;
     public int vida;
     public Transform target;
-    public int range = 2;
+    public float range = 2.5f;
     public LayerMask Inimigos;
 
     public string tagEnemy;
