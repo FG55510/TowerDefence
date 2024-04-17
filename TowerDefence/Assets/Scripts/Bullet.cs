@@ -37,7 +37,7 @@ public class Bullet : MonoBehaviour
                 enemy.DealDamage(dano);
                 Destroy(gameObject);
             }
-            Destroy(gameObject,1);
+            Destroy(gameObject,0.5f);
         }
         else{
             Destroy(gameObject);

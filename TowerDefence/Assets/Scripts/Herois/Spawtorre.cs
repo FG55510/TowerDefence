@@ -14,25 +14,19 @@ public class Spawtorre : MonoBehaviour
     public GameObject heroi;
 
     public GameObject bardo;
-   /* Vector3 mousepos;
 
-    Collider2D co;
-    public bool temtorre = false;
-
-    
-
-    public GameObject tile;
-
-    float largura;
-
-    float altura;*/
     Camera cam;
     public LayerMask spawheroi;
     public LayerMask spawtorre; 
 
+    public CompraDeHeroi compra;
+
+    public bool check;
+
     // Start is called before the first frame update
     void Start()
     {
+        compra = GetComponent<CompraDeHeroi>();
         cam = Camera.main;
         modoheroi = false;
         /*co = GetComponent<Collider2D>();
@@ -53,9 +47,12 @@ public class Spawtorre : MonoBehaviour
 
                 if(hit.collider)
                 {
-                    Debug.Log ("Target Position: " + hit.collider.gameObject.transform.position);
-                    hit.collider.gameObject.layer = LayerMask.NameToLayer("Ocupado");
-                    Instantiate(bardo, hit.collider.gameObject.transform.position, Quaternion.identity, hit.collider.gameObject.transform);
+                    check = compra.Checkprecobardo();
+                    if(check){
+                        hit.collider.gameObject.layer = LayerMask.NameToLayer("Ocupado");
+                        Instantiate(bardo, hit.collider.gameObject.transform.position, Quaternion.identity, hit.collider.gameObject.transform);
+                    }
+                    
                 }
             }
         }
@@ -67,9 +64,12 @@ public class Spawtorre : MonoBehaviour
 
                 if(hit.collider)
                 {
-                   // Debug.Log ("Target Position: " + hit.collider.gameObject.transform.position);
-                    hit.collider.gameObject.layer = LayerMask.NameToLayer("Ocupado");
+                    check = compra.Checkprecofazendeira();
+                    if(check){
+                        hit.collider.gameObject.layer = LayerMask.NameToLayer("Ocupado");
                     Instantiate(heroi, hit.collider.gameObject.transform.position, Quaternion.identity, hit.collider.gameObject.transform);
+                    }
+                    
                 }
             }
         }
@@ -80,9 +80,16 @@ public class Spawtorre : MonoBehaviour
 
                 if(hit.collider)
                 {
-                  //  Debug.Log ("Target Position: " + hit.collider.gameObject.transform.position);
-                    hit.collider.gameObject.layer = LayerMask.NameToLayer("Ocupado");
+                    check = compra.Checkprecomago();
+                    if(check){
+                        hit.collider.gameObject.layer = LayerMask.NameToLayer("Ocupado");
                     Instantiate(torre, hit.collider.gameObject.transform.position, Quaternion.identity, hit.collider.gameObject.transform);
+                    }
+                    else{
+                        Debug.Log ("Não deu");
+                    }
+                  //  Debug.Log ("Target Position: " + hit.collider.gameObject.transform.position);
+                    
                 }
 
             }

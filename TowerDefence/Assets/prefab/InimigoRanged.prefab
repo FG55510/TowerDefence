@@ -133,6 +133,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 659ff0a1dafb8a949b506e33ba6cf3e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mlp: {fileID: 0}
   tipo: 1
   initialHealth: 10
   maxHealth: 10
@@ -201,7 +202,7 @@ MonoBehaviour:
   ataque: {fileID: 0}
   indexpause: 0
   target: {fileID: 0}
-  range: 10
+  range: 3.5
   Torres:
     serializedVersion: 2
     m_Bits: 256
@@ -221,5 +222,5 @@ MonoBehaviour:
   target: {fileID: 0}
   arma: {fileID: 1487987528105124391}
   firetime: 0
-  sps: 2
+  sps: 1
   GoBullet: {fileID: 5292504906733427949, guid: a0053d502867be84493bdb9eab2b10af, type: 3}

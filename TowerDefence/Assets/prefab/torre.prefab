@@ -152,7 +152,7 @@ MonoBehaviour:
   dano: 0
   vida: 0
   target: {fileID: 0}
-  range: 5
+  range: 3.5
   Inimigos:
     serializedVersion: 2
     m_Bits: 0
@@ -160,7 +160,7 @@ MonoBehaviour:
   GoBullet: {fileID: 6026055996865780424, guid: 9b4c64068e65abf41b1b9fa0cbf69f52, type: 3}
   arma: {fileID: 5239339005465730836}
   firetime: 0
-  sps: 10
+  sps: 5
 --- !u!114 &117577156796757366
 MonoBehaviour:
   m_ObjectHideFlags: 0

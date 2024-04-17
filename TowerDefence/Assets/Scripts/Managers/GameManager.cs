@@ -21,7 +21,7 @@ public class GameManager : MonoBehaviour
 
     public int playerSuprimentos = 3;
 
-    public int playermoral = 0;
+    public int playermoral = 400;
 
     
 
@@ -47,7 +47,16 @@ public class GameManager : MonoBehaviour
     }
 
     public void AddMoral(int moral){
-        gameData.playerMoral = moral;
+        gameData.playerMoral += moral;
         playermoral = gameData.playerMoral;
+    }
+
+   public bool Checkprice(int value){
+        if (value>= playermoral){
+            return true;
+        }
+        else{
+            return false;
+        }
     }
 }
