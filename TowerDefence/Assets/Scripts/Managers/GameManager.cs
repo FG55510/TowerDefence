@@ -52,7 +52,7 @@ public class GameManager : MonoBehaviour
     }
 
    public bool Checkprice(int value){
-        if (value>= playermoral){
+        if (value <= playermoral){
             return true;
         }
         else{

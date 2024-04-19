@@ -2535,7 +2535,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameData: {fileID: 11400000, guid: 1083282db3652594987ad45618298acc, type: 2}
   playerSuprimentos: 3
-  playermoral: 0
+  playermoral: 400
 --- !u!4 &1618231382
 Transform:
   m_ObjectHideFlags: 0
