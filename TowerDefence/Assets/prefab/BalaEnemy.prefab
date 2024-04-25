@@ -99,7 +99,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 8
-  dano: 5
+  targetTransform: {fileID: 0}
+  dano: 3
   enemylayer:
     serializedVersion: 2
     m_Bits: 256

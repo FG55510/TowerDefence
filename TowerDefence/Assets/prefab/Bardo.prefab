@@ -100,7 +100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d486067f39df6ad439a4e9cdf9e36eeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moralgerada: 20
+  moralgerada: 100
   Tempoparagerar: 5
 --- !u!61 &-7774248976195582237
 BoxCollider2D:
