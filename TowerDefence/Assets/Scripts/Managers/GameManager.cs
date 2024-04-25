@@ -7,7 +7,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
     public SO_Gamedata gameData;
-    public static UIManager ui;
+ //   public static UIManager ui;
 
     void Awake () {
         if (!Instance)
@@ -29,7 +29,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        ui = FindAnyObjectByType<UIManager>();
+   //     ui = FindAnyObjectByType<UIManager>();
 
     }
 
@@ -42,7 +42,7 @@ public class GameManager : MonoBehaviour
     {
         gameData.playerSuprimentos -= suprimentos;
         playerSuprimentos = gameData.playerSuprimentos;
-        ui.MudarSuplimentos(playerSuprimentos);
+     //   ui.MudarSuplimentos(playerSuprimentos);
       //  if (gameData.playerSuprimentos <= 0)
        // {
             //GameOver
@@ -52,7 +52,7 @@ public class GameManager : MonoBehaviour
     public void AddMoral(int moral){
         gameData.playerMoral += moral;
         playermoral = gameData.playerMoral;
-        ui.MudarMoral(playermoral);
+       // ui.MudarMoral(playermoral);
     }
 
    public bool Checkprice(int value){
