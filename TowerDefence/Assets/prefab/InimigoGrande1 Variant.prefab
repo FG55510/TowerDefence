@@ -9,6 +9,18 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 633742743886274384, guid: f5cd4748b95bf264a8b9faf5c6a93a00, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 633742743886274384, guid: f5cd4748b95bf264a8b9faf5c6a93a00, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 633742743886274384, guid: f5cd4748b95bf264a8b9faf5c6a93a00, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 633742743886274384, guid: f5cd4748b95bf264a8b9faf5c6a93a00, type: 3}
       propertyPath: m_LocalPosition.x
       value: 6.49
       objectReference: {fileID: 0}
@@ -47,6 +59,26 @@ PrefabInstance:
     - target: {fileID: 633742743886274384, guid: f5cd4748b95bf264a8b9faf5c6a93a00, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 633742743886274384, guid: f5cd4748b95bf264a8b9faf5c6a93a00, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2914649541630747814, guid: f5cd4748b95bf264a8b9faf5c6a93a00, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 2091797444, guid: 63d56fd1d0f534d4fb3839e025e5e6e1, type: 3}
+    - target: {fileID: 2914649541630747814, guid: f5cd4748b95bf264a8b9faf5c6a93a00, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2914649541630747814, guid: f5cd4748b95bf264a8b9faf5c6a93a00, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2914649541630747814, guid: f5cd4748b95bf264a8b9faf5c6a93a00, type: 3}
+      propertyPath: m_Color.r
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2980791316445769088, guid: f5cd4748b95bf264a8b9faf5c6a93a00, type: 3}
       propertyPath: moveSpeed
