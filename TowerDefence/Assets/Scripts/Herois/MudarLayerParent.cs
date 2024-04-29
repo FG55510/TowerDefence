@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Unity.Mathematics;
 
 public class MudarLayerParent : MonoBehaviour
 {
@@ -10,13 +11,16 @@ public class MudarLayerParent : MonoBehaviour
     }
 
     public tile tipo;
+    public LayerMask mask;
 
     public void Final(){
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.zero, math.INFINITY,mask);
+        
         if(tipo == tile.Heroi){
-            transform.parent.gameObject.layer = LayerMask.NameToLayer("TilePath");
+            hit.collider.gameObject.layer = LayerMask.NameToLayer("TilePath");
         }
         else {
-            transform.parent.gameObject.layer = LayerMask.NameToLayer("TileNormal");
+            hit.collider.gameObject.layer = LayerMask.NameToLayer("TileNormal");
         }
     }
     // Start is called before the first frame update

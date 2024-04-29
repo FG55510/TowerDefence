@@ -50,7 +50,7 @@ public class Spawtorre : MonoBehaviour
                     check = compra.Checkprecobardo();
                     if(check){
                         hit.collider.gameObject.layer = LayerMask.NameToLayer("Ocupado");
-                        Instantiate(bardo, hit.collider.gameObject.transform.position, Quaternion.identity, hit.collider.gameObject.transform);
+                        Instantiate(bardo, hit.collider.gameObject.transform.position, Quaternion.identity);
                     }
                     
                 }
@@ -67,7 +67,7 @@ public class Spawtorre : MonoBehaviour
                     check = compra.Checkprecofazendeira();
                     if(check){
                         hit.collider.gameObject.layer = LayerMask.NameToLayer("Ocupado");
-                    Instantiate(heroi, hit.collider.gameObject.transform.position, Quaternion.identity, hit.collider.gameObject.transform);
+                    Instantiate(heroi, hit.collider.gameObject.transform.position, Quaternion.identity);
                     }
                     
                 }
@@ -83,7 +83,7 @@ public class Spawtorre : MonoBehaviour
                     check = compra.Checkprecomago();
                     if(check){
                         hit.collider.gameObject.layer = LayerMask.NameToLayer("Ocupado");
-                    Instantiate(torre, hit.collider.gameObject.transform.position, Quaternion.identity, hit.collider.gameObject.transform);
+                    Instantiate(torre, hit.collider.gameObject.transform.position, Quaternion.identity);
                     }
                     else{
                         Debug.Log ("Não deu");
