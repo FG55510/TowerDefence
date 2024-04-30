@@ -21,8 +21,20 @@ PrefabInstance:
       value: 0.7924528
       objectReference: {fileID: 0}
     - target: {fileID: 618707988136905621, guid: 20284fd43c1d7c648a56c796709d0b38, type: 3}
+      propertyPath: m_SortingLayer
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 618707988136905621, guid: 20284fd43c1d7c648a56c796709d0b38, type: 3}
       propertyPath: m_SortingOrder
-      value: -11
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 618707988136905621, guid: 20284fd43c1d7c648a56c796709d0b38, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 1833602351
+      objectReference: {fileID: 0}
+    - target: {fileID: 2706419771131277721, guid: 20284fd43c1d7c648a56c796709d0b38, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3265415300574994403, guid: 20284fd43c1d7c648a56c796709d0b38, type: 3}
       propertyPath: m_Name

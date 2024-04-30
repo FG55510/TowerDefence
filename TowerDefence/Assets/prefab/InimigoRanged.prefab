@@ -46,6 +46,7 @@ GameObject:
   - component: {fileID: 8020329088957817947}
   - component: {fileID: 38404165054735188}
   - component: {fileID: 7674643438322165806}
+  - component: {fileID: 8717003043326235147}
   m_Layer: 9
   m_Name: InimigoRanged
   m_TagString: Enemy
@@ -197,9 +198,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1b825e77cfd9be41869f6c5eb1baa80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tipo: 0
   estado: 0
   move: {fileID: 0}
   ataque: {fileID: 0}
+  Gtt: {fileID: 0}
   indexpause: 0
   target: {fileID: 0}
   range: 3.5
@@ -224,3 +227,19 @@ MonoBehaviour:
   firetime: 0
   sps: 1
   GoBullet: {fileID: 5292504906733427949, guid: a0053d502867be84493bdb9eab2b10af, type: 3}
+--- !u!114 &8717003043326235147
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6098043289844986707}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b5cae25e0719f84fa9f82db60af7753, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  target: {fileID: 0}
+  ESM: {fileID: 0}
+  state: 1

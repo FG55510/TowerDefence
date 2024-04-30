@@ -2,18 +2,27 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
-public enum Estado
+public enum EstadoEnemy
 {
         FollowPath,
-        Attack
+        Attack,
+        GoTo
+}
+
+public enum TipoEnemy
+{
+    Terrestre,
+    Voador
 }
 public class EnemystateManager : MonoBehaviour
 {
+    public TipoEnemy tipo;
 
-    public Estado estado;
+    public EstadoEnemy estado;
     public EnemyNEO move;
 
     public EnemyRangeAttack ataque;
+    public GoToTower Gtt;
 
     public int indexpause;
 
@@ -30,7 +39,8 @@ public class EnemystateManager : MonoBehaviour
     {
         move =  GetComponent<EnemyNEO>();
         ataque = GetComponent<EnemyRangeAttack>();
-        estado = Estado.FollowPath;
+        Gtt = GetComponent<GoToTower>();
+        estado = EstadoEnemy.FollowPath;
     }
 
     // Update is called once per frame
@@ -38,14 +48,27 @@ public class EnemystateManager : MonoBehaviour
     {
         miraativa = Physics2D.OverlapCircle(transform.position,range);
         Detectartorre();
-        if(target != null){
-            estado = Estado.Attack;
+        if (target == null)
+        {
+            estado = EstadoEnemy.FollowPath;
             Mudarestado(estado);
         }
-        else {
-            estado = Estado.FollowPath;
+
+        else if (tipo == TipoEnemy.Voador && transform.position != target.position)
+        {
+            estado = EstadoEnemy.GoTo;
             Mudarestado(estado);
         }
+        else
+        {
+            estado = EstadoEnemy.Attack;
+            Mudarestado(estado);
+        }
+    }
+    public void EqualizadorEstado(EstadoEnemy state)
+    {
+        estado = state;
+        Mudarestado(estado);
     }
 
     public void Detectartorre(){
@@ -57,19 +80,31 @@ public class EnemystateManager : MonoBehaviour
             target = null;
         }
     }
-    public void Mudarestado(Estado estado){
+    public void Mudarestado(EstadoEnemy estado){
         switch (estado)
-    {
-        case Estado.FollowPath:
-        move.enabled = true;
-        ataque.enabled = false;
-        break;
-        case Estado.Attack:
-        move.enabled = false;
-        ataque.enabled = true;
-        ataque.SetTarget(target);
-        break;
-    }
+        {
+        case EstadoEnemy.FollowPath:
+            move.enabled = true;
+            ataque.enabled = false;
+            Gtt.enabled = false;
+            break;
+
+        case EstadoEnemy.Attack:
+            move.enabled = false;
+            ataque.enabled = true;
+            Gtt.enabled = false;
+            ataque.SetTarget(target);
+            break;
+        
+        
+        case EstadoEnemy.GoTo:
+            move.enabled = false;
+            ataque.enabled = false;
+            Gtt.enabled = true;
+            Gtt.SetTarget(target);
+            break;
+
+        }
     }
 
     private void OnDrawGizmos()

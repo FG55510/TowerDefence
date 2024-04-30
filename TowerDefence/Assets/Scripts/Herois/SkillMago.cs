@@ -18,7 +18,7 @@ public class SkillMago : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0)){
+        if (Input.GetKeyDown(KeyCode.S)){
              RaycastHit2D[] hits = Physics2D.CircleCastAll(transform.position,range,(Vector2) transform.position, 0f, Tiles);
              foreach (RaycastHit2D hit in hits){
                 PoisonTile poison = hit.collider.gameObject.GetComponent<PoisonTile>();
