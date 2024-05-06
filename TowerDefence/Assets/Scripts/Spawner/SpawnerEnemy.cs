@@ -1,11 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public enum SpawnModes
 {
     Fixed,
-    Random
+    Random,
+    OnButton
 }
 
 public class SpawnerEnemy : MonoBehaviour
@@ -28,11 +31,13 @@ public class SpawnerEnemy : MonoBehaviour
 
     private ObjectPooler _pooler;
     private WayPoint _waypoint;
+    private SpawnerButton _button;
 
     private void Start()
     {
         _pooler = GetComponent<ObjectPooler>();
         _waypoint = GetComponent<WayPoint>();
+        _button = GetComponent<SpawnerButton>();
 
         _enemiesRemaining = enemyCount;
     }
@@ -49,6 +54,12 @@ public class SpawnerEnemy : MonoBehaviour
                 SpawnEnemy();
             }
         }
+    }
+
+    public void SpawCommand()
+    {
+        StartCoroutine(NextWave());
+        _button.check = false;
     }
 
     public void SpawnEnemy()
@@ -84,7 +95,8 @@ public class SpawnerEnemy : MonoBehaviour
 
     private IEnumerator NextWave ()
     {
-        yield return new WaitForSeconds(delayBeetweenWaves);
+        yield return null;
+       // yield return new WaitForSeconds(delayBeetweenWaves);
         _enemiesRemaining = enemyCount;
         _spawnTimer = 0f;
         _enemiesSpawned = 0;
@@ -95,7 +107,7 @@ public class SpawnerEnemy : MonoBehaviour
         _enemiesRemaining--;
         if (_enemiesRemaining <= 0) 
         {
-            StartCoroutine(NextWave());
+            _button.check = true;
         }
     }
 
