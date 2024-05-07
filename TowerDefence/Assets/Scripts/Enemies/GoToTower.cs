@@ -27,6 +27,10 @@ public class GoToTower : MonoBehaviour
             transform.Translate(direction * speed * Time.deltaTime);
             
         }
+        else
+        {
+            Debug.LogError("Calma");
+        }
         if (transform.position == target.position)
         {
             Reach();

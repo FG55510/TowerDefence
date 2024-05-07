@@ -11,12 +11,12 @@ public enum EstadoTile
 public class StateTile : MonoBehaviour
 {
     public EstadoTile tile;
-    public PoisonTile pe;
+    public PoisonTile Pe;
     // Start is called before the first frame update
     void Start()
     {
         tile = EstadoTile.Normal;
-        pe = GetComponent<PoisonTile>();
+        Pe = GetComponent<PoisonTile>();
     }
 
     // Update is called once per frame
@@ -25,8 +25,30 @@ public class StateTile : MonoBehaviour
         switch (tile)
         {
             case EstadoTile.Normal:
+                EstadoConse(tile);
                 break;
             case EstadoTile.PoisonEnemies:
+                EstadoConse(tile);
+                break;
+            case EstadoTile.PoisonTower:
+                EstadoConse(tile);
+                break;
+        }
+    }
+
+    public void MudarEstado(EstadoTile state)
+    {
+        tile = state;
+    }
+
+    public void EstadoConse(EstadoTile tipo)
+    {
+        switch (tipo) {
+            case EstadoTile.Normal:
+                Pe.enabled = false;
+                break;
+            case EstadoTile.PoisonEnemies:
+                Pe.enabled = true;
                 break;
             case EstadoTile.PoisonTower:
                 break;

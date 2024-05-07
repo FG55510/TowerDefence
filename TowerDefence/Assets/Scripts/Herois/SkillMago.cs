@@ -21,8 +21,8 @@ public class SkillMago : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.S)){
              RaycastHit2D[] hits = Physics2D.CircleCastAll(transform.position,range,(Vector2) transform.position, 0f, Tiles);
              foreach (RaycastHit2D hit in hits){
-                PoisonTile poison = hit.collider.gameObject.GetComponent<PoisonTile>();
-                poison.PoisonActive();
+                StateTile Estado = hit.collider.gameObject.GetComponent<StateTile>();
+                Estado.MudarEstado(EstadoTile.PoisonEnemies);
             }
         }
     }
