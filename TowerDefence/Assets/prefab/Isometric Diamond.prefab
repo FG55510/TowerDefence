@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6094663433147725938}
   - component: {fileID: 1031965374835279132}
   - component: {fileID: 228363225721889179}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Isometric Diamond
   m_TagString: Untagged
   m_Icon: {fileID: 0}

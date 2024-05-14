@@ -139,7 +139,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3265415300574994403}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ea6c6813b3750bc40ae2bb9279ae4d7a, type: 3}
   m_Name: 
@@ -149,7 +149,7 @@ MonoBehaviour:
   state: {fileID: 0}
   tempopoison: 3
   tpr: 0
-  tag: Enemy
+  Enemytag: Enemy
 --- !u!114 &3439494451686224702
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -157,7 +157,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3265415300574994403}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 752ee64e52f6a0f4e8bf6d5e3c9de03e, type: 3}
   m_Name: 

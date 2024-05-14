@@ -15,7 +15,7 @@ public class SpawnerEnemy : MonoBehaviour
 {
     [Header ("Settings")]
     [SerializeField] private SpawnModes spawnMode = SpawnModes.Fixed;
-    [SerializeField] private int enemyCount = 10;
+    [SerializeField] public int enemyCount = 10;
     [SerializeField] private float delayBeetweenWaves = 1f;
 
     [Header("Fixed Delay")]

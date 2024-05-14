@@ -24,6 +24,8 @@ public class GameManager : MonoBehaviour
 
     public int playermoral = 400;
 
+    public int waveatual = 1;
+
     
 
     // Start is called before the first frame update
