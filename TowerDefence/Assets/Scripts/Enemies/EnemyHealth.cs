@@ -69,6 +69,17 @@ public class EnemyHealth : MonoBehaviour
         }
     }
 
+    public void ContinousDamage(float dps, float tempo)
+    {
+        DealDamage(dps);
+        Invoke("ContinousDamage", 2);
+    }
+
+    public void StopContinousDamage()
+    {
+        Debug.LogError("Stop");
+    }
+
     public void ResetHealth()
     {
         CurrentHealth = initialHealth;

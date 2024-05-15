@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class PoisonTile : MonoBehaviour
 {
+    public float dps = 1;
+
     public Color ogcolor;
     public SpriteRenderer sr;
 
@@ -15,6 +17,10 @@ public class PoisonTile : MonoBehaviour
     public float tpr;
 
     public string Enemytag = "Enemy";
+
+    public bool colide = false;
+
+    public EnemyHealth eh;
     // Start is called before the first frame update
     void Start()
     {
@@ -43,16 +49,26 @@ public class PoisonTile : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
-    {   Debug.LogError("Colidiu");
-        if(collision.CompareTag(tag))
+    {   
+        if(collision.CompareTag(Enemytag))
         {
-            
-            EnemyHealth eh = collision.GetComponent<EnemyHealth>();
-            eh.DealDamage(1);
+            Debug.LogError("Colidiu");
+            eh = collision.GetComponent<EnemyHealth>();
+            eh.ContinousDamage(dps, 1);
 
         }
         
     }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag(Enemytag))
+        {
+            eh = collision.GetComponent<EnemyHealth>();
+            eh.StopContinousDamage();
+        }
+    }
+
 
 
 }

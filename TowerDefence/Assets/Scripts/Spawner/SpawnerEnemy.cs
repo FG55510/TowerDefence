@@ -7,16 +7,16 @@ using Random = UnityEngine.Random;
 public enum SpawnModes
 {
     Fixed,
-    Random,
-    OnButton
+    Random
 }
 
 public class SpawnerEnemy : MonoBehaviour
 {
     [Header ("Settings")]
     [SerializeField] private SpawnModes spawnMode = SpawnModes.Fixed;
-    [SerializeField] public int enemyCount = 10;
+    [SerializeField] private int enemyCount = 10;
     [SerializeField] private float delayBeetweenWaves = 1f;
+    [SerializeField] private int enemyIncperWave = 3;
 
     [Header("Fixed Delay")]
     [SerializeField] private float delayBeetweenSpawns;
@@ -32,6 +32,7 @@ public class SpawnerEnemy : MonoBehaviour
     private ObjectPooler _pooler;
     private WayPoint _waypoint;
     private SpawnerButton _button;
+    
 
     private void Start()
     {
@@ -96,7 +97,8 @@ public class SpawnerEnemy : MonoBehaviour
     private IEnumerator NextWave ()
     {
         yield return null;
-       // yield return new WaitForSeconds(delayBeetweenWaves);
+        // yield return new WaitForSeconds(delayBeetweenWaves);
+        enemyCount += enemyIncperWave;
         _enemiesRemaining = enemyCount;
         _spawnTimer = 0f;
         _enemiesSpawned = 0;
@@ -107,6 +109,7 @@ public class SpawnerEnemy : MonoBehaviour
         _enemiesRemaining--;
         if (_enemiesRemaining <= 0) 
         {
+
             _button.check = true;
         }
     }

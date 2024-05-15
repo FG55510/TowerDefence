@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 6094663433147725938}
   - component: {fileID: 1031965374835279132}
   - component: {fileID: 228363225721889179}
+  - component: {fileID: 4663932432376906773}
+  - component: {fileID: 1063168600094344568}
   m_Layer: 13
   m_Name: Isometric Diamond
   m_TagString: Untagged
@@ -130,3 +132,35 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 0.5}
   m_EdgeRadius: 0
+--- !u!114 &4663932432376906773
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2416814128065629167}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 659ff0a1dafb8a949b506e33ba6cf3e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mlp: {fileID: 0}
+  tipo: 0
+  initialHealth: 10
+  maxHealth: 10
+--- !u!114 &1063168600094344568
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2416814128065629167}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87cfaafe1bac32f488e6723139222f5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tipo: 0
+  mask:
+    serializedVersion: 2
+    m_Bits: 2048
