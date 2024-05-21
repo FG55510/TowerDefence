@@ -406,6 +406,97 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1689093447033939714, guid: 9efa7d25b767e6f48950fb44263111a6, type: 3}
   m_PrefabInstance: {fileID: 1646983484}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &256080414
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 256080416}
+  - component: {fileID: 256080415}
+  m_Layer: 0
+  m_Name: SpawnerManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &256080415
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 256080414}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1562a5f35425e474fa7948282752dd71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myButton: {fileID: 1965306871}
+  check: 0
+--- !u!4 &256080416
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 256080414}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &297774628
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 297774630}
+  - component: {fileID: 297774629}
+  m_Layer: 0
+  m_Name: Pause
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &297774629
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 297774628}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d842337893bcc854a84766ea27c27d9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentState: 0
+--- !u!4 &297774630
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 297774628}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &323784261
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -972,7 +1063,6 @@ GameObject:
   - component: {fileID: 552754152}
   - component: {fileID: 552754151}
   - component: {fileID: 552754150}
-  - component: {fileID: 552754154}
   m_Layer: 0
   m_Name: EnemyManager (Path2)
   m_TagString: Untagged
@@ -1009,9 +1099,11 @@ MonoBehaviour:
   spawnMode: 0
   enemyCount: 3
   delayBeetweenWaves: 10
+  enemyIncperWave: 3
   delayBeetweenSpawns: 0.5
   minRandomDelay: 10
   maxRandomDelay: 15
+  _button: {fileID: 256080415}
 --- !u!114 &552754152
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1050,20 +1142,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &552754154
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 552754149}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1562a5f35425e474fa7948282752dd71, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  myButton: {fileID: 1965306871}
-  check: 0
 --- !u!1001 &611999457
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2948,6 +3026,8 @@ MonoBehaviour:
   gameData: {fileID: 11400000, guid: 1083282db3652594987ad45618298acc, type: 2}
   playerSuprimentos: 3
   playermoral: 700
+  waveatual: 1
+  state: {fileID: 0}
 --- !u!4 &1618231382
 Transform:
   m_ObjectHideFlags: 0
@@ -3732,7 +3812,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &2020342754
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3748,9 +3828,11 @@ MonoBehaviour:
   spawnMode: 0
   enemyCount: 3
   delayBeetweenWaves: 10
+  enemyIncperWave: 3
   delayBeetweenSpawns: 0.5
   minRandomDelay: 5
   maxRandomDelay: 10
+  _button: {fileID: 256080415}
 --- !u!114 &2020342755
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4310,3 +4392,5 @@ SceneRoots:
   - {fileID: 423254201}
   - {fileID: 1074698533084068087}
   - {fileID: 373167783}
+  - {fileID: 256080416}
+  - {fileID: 297774630}

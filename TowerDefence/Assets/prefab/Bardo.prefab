@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: -7774248976195582237}
   - component: {fileID: -870174935695341666}
   - component: {fileID: 8340552486263004601}
+  - component: {fileID: 1023387665400061978}
   m_Layer: 8
   m_Name: Bardo
   m_TagString: Untagged
@@ -176,3 +177,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tipo: 1
+  mask:
+    serializedVersion: 2
+    m_Bits: 2048
+--- !u!114 &1023387665400061978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4399852853806341483}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1ffed3c1d0a0e74d97967175a280f8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Geramoral: {fileID: 0}
+  diminuirdelay: 0.5
+  aumentarquanmoral: 10

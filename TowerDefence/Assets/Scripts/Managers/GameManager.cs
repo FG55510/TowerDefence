@@ -26,6 +26,8 @@ public class GameManager : MonoBehaviour
 
     public int waveatual = 1;
 
+    public GameStateManager state;
+
     
 
     // Start is called before the first frame update
@@ -64,5 +66,10 @@ public class GameManager : MonoBehaviour
         else{
             return false;
         }
+    }
+
+    public void StopHeroes()
+    {
+
     }
 }

@@ -31,14 +31,13 @@ public class SpawnerEnemy : MonoBehaviour
 
     private ObjectPooler _pooler;
     private WayPoint _waypoint;
-    private SpawnerButton _button;
+    public SpawnerButton _button;
     
 
     private void Start()
     {
         _pooler = GetComponent<ObjectPooler>();
         _waypoint = GetComponent<WayPoint>();
-        _button = GetComponent<SpawnerButton>();
 
         _enemiesRemaining = enemyCount;
     }
