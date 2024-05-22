@@ -31,7 +31,7 @@ public class SpawnerEnemy : MonoBehaviour
 
     private ObjectPooler _pooler;
     private WayPoint _waypoint;
-    public SpawnerButton _button;
+    public WaveManager waveManager;
     
 
     private void Start()
@@ -59,7 +59,7 @@ public class SpawnerEnemy : MonoBehaviour
     public void SpawCommand()
     {
         StartCoroutine(NextWave());
-        _button.check = false;
+        //_button.check = false;
     }
 
     public void SpawnEnemy()
@@ -93,11 +93,16 @@ public class SpawnerEnemy : MonoBehaviour
         return randomTimer;
     }
 
+    public void IncreaseEnemies(int increase)
+    {
+        enemyCount += increase; 
+    }
+
     private IEnumerator NextWave ()
     {
         yield return null;
-        // yield return new WaitForSeconds(delayBeetweenWaves);
-        enemyCount += enemyIncperWave;
+        //yield return new WaitForSeconds(delayBeetweenWaves);
+        //enemyCount += enemyIncperWave;
         _enemiesRemaining = enemyCount;
         _spawnTimer = 0f;
         _enemiesSpawned = 0;
@@ -108,8 +113,8 @@ public class SpawnerEnemy : MonoBehaviour
         _enemiesRemaining--;
         if (_enemiesRemaining <= 0) 
         {
-
-            _button.check = true;
+            waveManager.CheckDefeatedEnemies();
+            //StartCoroutine(NextWave());
         }
     }
 

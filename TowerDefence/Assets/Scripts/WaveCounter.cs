@@ -18,12 +18,31 @@ public class WaveCounter : MonoBehaviour
     }
 
     public int waveatual = 0;
-    public int enecounter = 0;
+    public int eneplus = 1;
 
-    public SpawnerEnemy Spawner1;
-    public SpawnerEnemy Spawner2;
+    public GameObject[] Spawners;
+
+    
     // Start is called before the first frame update
     void Start()
     {
+        Spawners[0].SetActive(true);
+        for (int i = 1; i < Spawners.Length; i++)
+        {
+            Spawners[i].SetActive(false);
+        }
+    }
+
+    public void MaisSpawners()
+    {
+        for (int i = 1; i < Spawners.Length; i++)
+        {
+            Spawners[i].SetActive(true);
+        }
+        foreach (GameObject obj in Spawners)
+        {
+            SpawnerEnemy se = obj.GetComponent<SpawnerEnemy>();
+            se.IncreaseEnemies(eneplus);
+        }
     }
 }
