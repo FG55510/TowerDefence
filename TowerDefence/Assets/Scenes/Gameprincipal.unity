@@ -417,6 +417,7 @@ GameObject:
   - component: {fileID: 256080416}
   - component: {fileID: 256080415}
   - component: {fileID: 256080417}
+  - component: {fileID: 256080418}
   m_Layer: 0
   m_Name: SpawnerManager
   m_TagString: Untagged
@@ -466,9 +467,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentWave: 0
-  waveText: {fileID: 0}
+  waveText: {fileID: 2077012748}
+  waveCounter: {fileID: 256080418}
   spawnerEnemy: {fileID: 552754149}
-  startWaveButton: {fileID: 1965306871}
+  button: {fileID: 256080415}
+--- !u!114 &256080418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 256080414}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 840c702b532e5ff4e84bc4a2121c4188, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waveatual: 0
+  eneplus: 1
+  Spawners:
+  - {fileID: 552754149}
+  - {fileID: 2020342753}
 --- !u!1 &297774628
 GameObject:
   m_ObjectHideFlags: 0
@@ -1121,7 +1140,7 @@ MonoBehaviour:
   delayBeetweenSpawns: 1
   minRandomDelay: 10
   maxRandomDelay: 15
-  _button: {fileID: 0}
+  waveManager: {fileID: 0}
 --- !u!114 &552754152
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2073,7 +2092,7 @@ MonoBehaviour:
   delayBeetweenSpawns: 0.5
   minRandomDelay: 5
   maxRandomDelay: 10
-  _button: {fileID: 0}
+  waveManager: {fileID: 0}
 --- !u!114 &1151487485
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2725,7 +2744,7 @@ MonoBehaviour:
   delayBeetweenSpawns: 0.5
   minRandomDelay: 5
   maxRandomDelay: 10
-  _button: {fileID: 0}
+  waveManager: {fileID: 0}
 --- !u!114 &1410642459
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3161,7 +3180,7 @@ MonoBehaviour:
   delayBeetweenSpawns: 0.5
   minRandomDelay: 10
   maxRandomDelay: 15
-  _button: {fileID: 0}
+  waveManager: {fileID: 0}
 --- !u!114 &1609036443
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3883,9 +3902,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 552754151}
-        m_TargetAssemblyTypeName: SpawnerEnemy, Assembly-CSharp
-        m_MethodName: SpawCommand
+      - m_Target: {fileID: 256080417}
+        m_TargetAssemblyTypeName: WaveManager, Assembly-CSharp
+        m_MethodName: StartWave
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4101,13 +4120,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnMode: 0
-  enemyCount: 3
+  enemyCount: 1
   delayBeetweenWaves: 10
   enemyIncperWave: 3
-  delayBeetweenSpawns: 0.5
+  delayBeetweenSpawns: 3
   minRandomDelay: 5
   maxRandomDelay: 10
-  _button: {fileID: 0}
+  waveManager: {fileID: 0}
 --- !u!114 &2020342755
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4157,7 +4176,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 6098043289844986707, guid: f5cd4748b95bf264a8b9faf5c6a93a00, type: 3}
-  poolSize: 3
+  poolSize: 5
 --- !u!4 &2026301964 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1689093447033939714, guid: 9efa7d25b767e6f48950fb44263111a6, type: 3}
@@ -4215,7 +4234,7 @@ MonoBehaviour:
   delayBeetweenSpawns: 0.5
   minRandomDelay: 10
   maxRandomDelay: 15
-  _button: {fileID: 0}
+  waveManager: {fileID: 0}
 --- !u!114 &2036407949
 MonoBehaviour:
   m_ObjectHideFlags: 0

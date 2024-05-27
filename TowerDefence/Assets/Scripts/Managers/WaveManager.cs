@@ -8,7 +8,6 @@ public class WaveManager : MonoBehaviour
 {
     public int currentWave = 0;
     public TMP_Text waveText;
-    private bool waveInProgress = false;
 
     public WaveCounter waveCounter;
 
@@ -25,7 +24,6 @@ public class WaveManager : MonoBehaviour
     {
         waveCounter.MaisSpawners();
         currentWave = currentWave + 1;
-        waveInProgress = true;
         button.check = false;
         spawnerEnemy.GetComponent<SpawnerEnemy>().SpawnEnemy();
         waveText.text = currentWave.ToString();
@@ -33,7 +31,14 @@ public class WaveManager : MonoBehaviour
 
     public void CheckDefeatedEnemies()
     {
-        button.check = true;
+        if (AllEnemiesDefeated())
+        {
+            button.check = true;
+        }
+        else
+        {
+            button.check = false;
+        }
 
     }
 

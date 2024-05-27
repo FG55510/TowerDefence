@@ -32,6 +32,8 @@ public class SpawnerEnemy : MonoBehaviour
     private ObjectPooler _pooler;
     private WayPoint _waypoint;
     public WaveManager waveManager;
+
+    public bool final = false;
     
 
     private void Start()
@@ -40,6 +42,8 @@ public class SpawnerEnemy : MonoBehaviour
         _waypoint = GetComponent<WayPoint>();
 
         _enemiesRemaining = enemyCount;
+
+        waveManager = FindAnyObjectByType<WaveManager>();
     }
 
     private void Update()
@@ -113,6 +117,7 @@ public class SpawnerEnemy : MonoBehaviour
         _enemiesRemaining--;
         if (_enemiesRemaining <= 0) 
         {
+            final = true;
             waveManager.CheckDefeatedEnemies();
             //StartCoroutine(NextWave());
         }
