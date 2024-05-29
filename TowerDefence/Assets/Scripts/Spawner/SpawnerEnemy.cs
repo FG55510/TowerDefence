@@ -7,8 +7,7 @@ using Random = UnityEngine.Random;
 public enum SpawnModes
 {
     Fixed,
-    Random,
-    OnButton
+    Random
 }
 
 public class SpawnerEnemy : MonoBehaviour
@@ -17,6 +16,7 @@ public class SpawnerEnemy : MonoBehaviour
     [SerializeField] private SpawnModes spawnMode = SpawnModes.Fixed;
     [SerializeField] private int enemyCount = 10;
     [SerializeField] private float delayBeetweenWaves = 1f;
+    [SerializeField] private int enemyIncperWave = 3;
 
     [Header("Fixed Delay")]
     [SerializeField] private float delayBeetweenSpawns;
@@ -31,15 +31,19 @@ public class SpawnerEnemy : MonoBehaviour
 
     private ObjectPooler _pooler;
     private WayPoint _waypoint;
-    private SpawnerButton _button;
+    public WaveManager waveManager;
+
+    public bool final = false;
+    
 
     private void Start()
     {
         _pooler = GetComponent<ObjectPooler>();
         _waypoint = GetComponent<WayPoint>();
-        _button = GetComponent<SpawnerButton>();
 
         _enemiesRemaining = enemyCount;
+
+        waveManager = FindAnyObjectByType<WaveManager>();
     }
 
     private void Update()
@@ -59,7 +63,7 @@ public class SpawnerEnemy : MonoBehaviour
     public void SpawCommand()
     {
         StartCoroutine(NextWave());
-        _button.check = false;
+        //_button.check = false;
     }
 
     public void SpawnEnemy()
@@ -93,10 +97,16 @@ public class SpawnerEnemy : MonoBehaviour
         return randomTimer;
     }
 
+    public void IncreaseEnemies(int increase)
+    {
+        enemyCount += increase; 
+    }
+
     private IEnumerator NextWave ()
     {
         yield return null;
-       // yield return new WaitForSeconds(delayBeetweenWaves);
+        //yield return new WaitForSeconds(delayBeetweenWaves);
+        //enemyCount += enemyIncperWave;
         _enemiesRemaining = enemyCount;
         _spawnTimer = 0f;
         _enemiesSpawned = 0;
@@ -107,7 +117,9 @@ public class SpawnerEnemy : MonoBehaviour
         _enemiesRemaining--;
         if (_enemiesRemaining <= 0) 
         {
-            _button.check = true;
+            final = true;
+            waveManager.CheckDefeatedEnemies();
+            //StartCoroutine(NextWave());
         }
     }
 

@@ -8,30 +8,23 @@ public class WaveManager : MonoBehaviour
 {
     public int currentWave = 0;
     public TMP_Text waveText;
-    private bool waveInProgress = false;
 
-    public GameObject spawnerEnemy; 
-    public Button startWaveButton;
+    public WaveCounter waveCounter;
 
-    void Start()
+    public GameObject spawnerEnemy;
+    public SpawnerButton button;
+
+    private void Start()
     {
-        HideButton();
-        waveText.text = "0";
-        startWaveButton.onClick.AddListener(StartWave); 
-        startWaveButton.interactable = true; 
+        waveText.text = currentWave.ToString();
     }
 
-    void Update()
-    {
-        HideButton();
-        CheckDefeatedEnemies();
-    }
 
     public void StartWave()
     {
+        waveCounter.MaisSpawners();
         currentWave = currentWave + 1;
-        waveInProgress = true;
-        startWaveButton.interactable = false;
+        button.check = false;
         spawnerEnemy.GetComponent<SpawnerEnemy>().SpawnEnemy();
         waveText.text = currentWave.ToString();
     }
@@ -40,9 +33,13 @@ public class WaveManager : MonoBehaviour
     {
         if (AllEnemiesDefeated())
         {
-            waveInProgress = false;
-            startWaveButton.interactable = true; 
+            button.check = true;
         }
+        else
+        {
+            button.check = false;
+        }
+
     }
 
     bool AllEnemiesDefeated()
@@ -58,9 +55,5 @@ public class WaveManager : MonoBehaviour
         return true; 
     }
 
-    public void HideButton()
-    {
-        startWaveButton.interactable = !startWaveButton.interactable;
-    }
 
 }

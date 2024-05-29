@@ -9,10 +9,14 @@ public class SkillMago : MonoBehaviour
     public LayerMask Tiles;
 
     public GameObject[] blocos;
+
+    public GameObject blods;
+
+    public float time = 3;
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame

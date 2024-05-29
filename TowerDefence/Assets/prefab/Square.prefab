@@ -144,12 +144,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea6c6813b3750bc40ae2bb9279ae4d7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dps: 1
   ogcolor: {r: 0, g: 0, b: 0, a: 0}
   sr: {fileID: 0}
   state: {fileID: 0}
   tempopoison: 3
   tpr: 0
-  tag: Enemy
+  Enemytag: Enemy
+  colide: 0
+  eh: {fileID: 0}
 --- !u!114 &3439494451686224702
 MonoBehaviour:
   m_ObjectHideFlags: 0

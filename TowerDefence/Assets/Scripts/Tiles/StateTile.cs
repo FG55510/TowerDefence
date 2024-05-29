@@ -49,8 +49,10 @@ public class StateTile : MonoBehaviour
                 break;
             case EstadoTile.PoisonEnemies:
                 Pe.enabled = true;
+                Pe.PoisonTarget("");
                 break;
             case EstadoTile.PoisonTower:
+
                 break;
         }
     }
