@@ -488,6 +488,10 @@ MonoBehaviour:
   Spawners:
   - {fileID: 552754149}
   - {fileID: 2020342753}
+  - {fileID: 1410642456}
+  - {fileID: 1151487482}
+  - {fileID: 2036407946}
+  - {fileID: 1609036440}
 --- !u!1 &297774628
 GameObject:
   m_ObjectHideFlags: 0
@@ -2272,7 +2276,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1689093447033939714, guid: 9efa7d25b767e6f48950fb44263111a6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 11.55
+      value: 8.092
       objectReference: {fileID: 0}
     - target: {fileID: 1689093447033939714, guid: 9efa7d25b767e6f48950fb44263111a6, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3597,7 +3601,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4839906658780909989, guid: e53d1b5acb2e2c64d933d0189236d19d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.18
+      value: -1.586
       objectReference: {fileID: 0}
     - target: {fileID: 4839906658780909989, guid: e53d1b5acb2e2c64d933d0189236d19d, type: 3}
       propertyPath: m_LocalPosition.y
@@ -4127,7 +4131,7 @@ MonoBehaviour:
   enemyCount: 1
   delayBeetweenWaves: 10
   enemyIncperWave: 3
-  delayBeetweenSpawns: 3
+  delayBeetweenSpawns: 1
   minRandomDelay: 5
   maxRandomDelay: 10
   waveManager: {fileID: 0}
