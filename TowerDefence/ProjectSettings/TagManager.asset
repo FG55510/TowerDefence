@@ -49,3 +49,6 @@ TagManager:
   - name: Torre
     uniqueID: 2827575473
     locked: 0
+  - name: Inimigos
+    uniqueID: 3350332141
+    locked: 0
