@@ -37,6 +37,10 @@ public class PoisonTile : MonoBehaviour
         PoisonActive();
 
     }
+    public void PoisonTarget(string alvo)
+    {
+        Enemytag = alvo;
+    }
 
     public void PoisonActive(){
         sr.color = Color.green;

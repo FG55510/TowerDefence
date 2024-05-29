@@ -10,15 +10,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 633742743886274384, guid: f5cd4748b95bf264a8b9faf5c6a93a00, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.5
+      value: 0.23367883
       objectReference: {fileID: 0}
     - target: {fileID: 633742743886274384, guid: f5cd4748b95bf264a8b9faf5c6a93a00, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.5
+      value: 0.23367883
       objectReference: {fileID: 0}
     - target: {fileID: 633742743886274384, guid: f5cd4748b95bf264a8b9faf5c6a93a00, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.5
+      value: 0.23367883
       objectReference: {fileID: 0}
     - target: {fileID: 633742743886274384, guid: f5cd4748b95bf264a8b9faf5c6a93a00, type: 3}
       propertyPath: m_LocalPosition.x
@@ -80,6 +80,10 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2914649541630747814, guid: f5cd4748b95bf264a8b9faf5c6a93a00, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2980791316445769088, guid: f5cd4748b95bf264a8b9faf5c6a93a00, type: 3}
       propertyPath: moveSpeed
       value: 1
@@ -92,7 +96,8 @@ PrefabInstance:
     - {fileID: 38404165054735188, guid: f5cd4748b95bf264a8b9faf5c6a93a00, type: 3}
     - {fileID: 7674643438322165806, guid: f5cd4748b95bf264a8b9faf5c6a93a00, type: 3}
     - {fileID: 8717003043326235147, guid: f5cd4748b95bf264a8b9faf5c6a93a00, type: 3}
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 9147999632535962458, guid: f5cd4748b95bf264a8b9faf5c6a93a00, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 6098043289844986707, guid: f5cd4748b95bf264a8b9faf5c6a93a00, type: 3}

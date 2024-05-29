@@ -1141,6 +1141,7 @@ MonoBehaviour:
   minRandomDelay: 10
   maxRandomDelay: 15
   waveManager: {fileID: 0}
+  final: 0
 --- !u!114 &552754152
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2093,6 +2094,7 @@ MonoBehaviour:
   minRandomDelay: 5
   maxRandomDelay: 10
   waveManager: {fileID: 0}
+  final: 0
 --- !u!114 &1151487485
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2270,7 +2272,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1689093447033939714, guid: 9efa7d25b767e6f48950fb44263111a6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.092
+      value: 11.55
       objectReference: {fileID: 0}
     - target: {fileID: 1689093447033939714, guid: 9efa7d25b767e6f48950fb44263111a6, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2745,6 +2747,7 @@ MonoBehaviour:
   minRandomDelay: 5
   maxRandomDelay: 10
   waveManager: {fileID: 0}
+  final: 0
 --- !u!114 &1410642459
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3181,6 +3184,7 @@ MonoBehaviour:
   minRandomDelay: 10
   maxRandomDelay: 15
   waveManager: {fileID: 0}
+  final: 0
 --- !u!114 &1609036443
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4127,6 +4131,7 @@ MonoBehaviour:
   minRandomDelay: 5
   maxRandomDelay: 10
   waveManager: {fileID: 0}
+  final: 0
 --- !u!114 &2020342755
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4235,6 +4240,7 @@ MonoBehaviour:
   minRandomDelay: 10
   maxRandomDelay: 15
   waveManager: {fileID: 0}
+  final: 0
 --- !u!114 &2036407949
 MonoBehaviour:
   m_ObjectHideFlags: 0

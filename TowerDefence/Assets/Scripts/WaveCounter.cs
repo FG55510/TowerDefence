@@ -35,7 +35,7 @@ public class WaveCounter : MonoBehaviour
 
     public void MaisSpawners()
     {
-        for (int i = 1; i < Spawners.Length; i++)
+        for (int i = 1; i < Spawners.Length;)
         {
             Spawners[i].SetActive(true);
         }
