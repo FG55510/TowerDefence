@@ -35,10 +35,8 @@ public class WaveCounter : MonoBehaviour
 
     public void MaisSpawners()
     {
-        for (int i = 1; i < Spawners.Length;)
-        {
-            Spawners[i].SetActive(true);
-        }
+        waveatual ++;
+        Spawners[waveatual].SetActive(true);
         foreach (GameObject obj in Spawners)
         {
             SpawnerEnemy se = obj.GetComponent<SpawnerEnemy>();
