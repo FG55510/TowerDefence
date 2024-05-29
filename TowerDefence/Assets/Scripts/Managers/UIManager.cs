@@ -8,6 +8,7 @@ public class UIManager : MonoBehaviour
 {
     public TMP_Text txtMoral;
     public TMP_Text txtSuplimentos;
+    public TMP_Text txtEnd;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,5 +24,10 @@ public class UIManager : MonoBehaviour
     public void MudarMoral(int value)
     {
         txtMoral.text = "Moral:" + value;
+    }
+
+    public void GameOver()
+    {
+        txtEnd.text = "GameOver";
     }
 }

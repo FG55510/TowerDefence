@@ -49,10 +49,10 @@ public class GameManager : MonoBehaviour
         gameData.playerSuprimentos -= suprimentos;
         playerSuprimentos = gameData.playerSuprimentos;
         ui.MudarSuplimentos(playerSuprimentos);
-      //  if (gameData.playerSuprimentos <= 0)
-       // {
-            //GameOver
-       // }
+        if (gameData.playerSuprimentos <= 1)
+        {
+            ui.GameOver();
+        }
     }
 
     public void AddMoral(int moral){

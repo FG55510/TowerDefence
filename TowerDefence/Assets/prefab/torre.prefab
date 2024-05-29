@@ -154,7 +154,7 @@ MonoBehaviour:
   dano: 0
   vida: 0
   target: {fileID: 0}
-  range: 3.7
+  range: 4
   Inimigos:
     serializedVersion: 2
     m_Bits: 0
@@ -212,6 +212,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 2240
   blocos: []
+  blods: {fileID: 4919497627620213751, guid: dc6ab86d58b1920479650485ca273356, type: 3}
 --- !u!1 &6911776737567505338
 GameObject:
   m_ObjectHideFlags: 0
@@ -253,19 +254,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 162153166827867286, guid: a3f3589557e71814787d39e655b02bfe, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.96319056
+      value: 0.96318984
       objectReference: {fileID: 0}
     - target: {fileID: 162153166827867286, guid: a3f3589557e71814787d39e655b02bfe, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.2688198
+      value: -0.26882225
       objectReference: {fileID: 0}
     - target: {fileID: 674634899674049308, guid: a3f3589557e71814787d39e655b02bfe, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.67109066
+      value: 0.67108953
       objectReference: {fileID: 0}
     - target: {fileID: 674634899674049308, guid: a3f3589557e71814787d39e655b02bfe, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.7413753
+      value: 0.74137634
       objectReference: {fileID: 0}
     - target: {fileID: 1921656497331669318, guid: a3f3589557e71814787d39e655b02bfe, type: 3}
       propertyPath: m_SortingLayer
@@ -277,11 +278,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4394519936866352862, guid: a3f3589557e71814787d39e655b02bfe, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9547777
+      value: 0.954778
       objectReference: {fileID: 0}
     - target: {fileID: 4394519936866352862, guid: a3f3589557e71814787d39e655b02bfe, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.29732063
+      value: 0.29731965
       objectReference: {fileID: 0}
     - target: {fileID: 4994592311675445723, guid: a3f3589557e71814787d39e655b02bfe, type: 3}
       propertyPath: m_LocalScale.x
@@ -341,27 +342,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8542798390350357246, guid: a3f3589557e71814787d39e655b02bfe, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.84568447
+      value: 0.84568506
       objectReference: {fileID: 0}
     - target: {fileID: 8542798390350357246, guid: a3f3589557e71814787d39e655b02bfe, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.5336832
+      value: -0.53368235
       objectReference: {fileID: 0}
     - target: {fileID: 8715571275326537899, guid: a3f3589557e71814787d39e655b02bfe, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7882624
+      value: 0.7882619
       objectReference: {fileID: 0}
     - target: {fileID: 8715571275326537899, guid: a3f3589557e71814787d39e655b02bfe, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.61533916
+      value: 0.6153399
       objectReference: {fileID: 0}
     - target: {fileID: 8866046856040081584, guid: a3f3589557e71814787d39e655b02bfe, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.5696627
+      value: 0.56966275
       objectReference: {fileID: 0}
     - target: {fileID: 8866046856040081584, guid: a3f3589557e71814787d39e655b02bfe, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.8218787
+      value: -0.8218786
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
