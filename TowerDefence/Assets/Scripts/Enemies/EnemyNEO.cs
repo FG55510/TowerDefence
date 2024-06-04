@@ -60,9 +60,10 @@ public class EnemyNEO : MonoBehaviour
         {
             _currentWaypointIndex++;
         }
-        else
+        else if(_currentWaypointIndex == lastWaypointIndex)
         {
             EndPointReached();
+            _currentWaypointIndex++;
         }
     }
 

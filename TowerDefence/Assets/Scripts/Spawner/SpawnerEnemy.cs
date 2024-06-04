@@ -27,7 +27,7 @@ public class SpawnerEnemy : MonoBehaviour
 
     private float _spawnTimer;
     private int _enemiesSpawned;
-    private int _enemiesRemaining;
+     int _enemiesRemaining;
 
     private ObjectPooler _pooler;
     private WayPoint _waypoint;
@@ -38,10 +38,13 @@ public class SpawnerEnemy : MonoBehaviour
 
     private void Start()
     {
+       
+        //Enemyfaltando.quant += enemyCount;
+        //_enemiesRemaining = Enemyfaltando.quant;
         _pooler = GetComponent<ObjectPooler>();
         _waypoint = GetComponent<WayPoint>();
 
-        _enemiesRemaining = enemyCount;
+        
 
         waveManager = FindAnyObjectByType<WaveManager>();
     }
@@ -62,7 +65,7 @@ public class SpawnerEnemy : MonoBehaviour
 
     public void SpawCommand()
     {
-        StartCoroutine(NextWave());
+        //StartCoroutine(NextWave());
         //_button.check = false;
     }
 
@@ -104,18 +107,25 @@ public class SpawnerEnemy : MonoBehaviour
 
     private IEnumerator NextWave ()
     {
-        yield return null;
         //yield return new WaitForSeconds(delayBeetweenWaves);
         //enemyCount += enemyIncperWave;
-        _enemiesRemaining = enemyCount;
+        ResetWave();
+        yield return null;
+    }
+
+    public void ResetWave()
+    {
+        Enemyfaltando.quant += enemyCount;
+        _enemiesRemaining = Enemyfaltando.quant;
         _spawnTimer = 0f;
         _enemiesSpawned = 0;
     }
 
     private void RecordEnemy()
     {
-        _enemiesRemaining--;
-        if (_enemiesRemaining <= 0) 
+        Enemyfaltando.quant--;
+        _enemiesRemaining = Enemyfaltando.quant;
+        if (Enemyfaltando.quant == 0) 
         {
             final = true;
             waveManager.CheckDefeatedEnemies();
@@ -134,4 +144,9 @@ public class SpawnerEnemy : MonoBehaviour
         EnemyNEO.OnEndReached -= RecordEnemy;
         EnemyHealth.OnEnemyKilled -= RecordEnemy;
     }
+}
+
+public static class Enemyfaltando{
+    public static int quant;
+
 }

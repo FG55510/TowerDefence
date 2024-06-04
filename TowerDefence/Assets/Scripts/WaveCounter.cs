@@ -27,6 +27,7 @@ public class WaveCounter : MonoBehaviour
     void Start()
     {
         Spawners[0].SetActive(true);
+        Spawners[0].GetComponent<SpawnerEnemy>().ResetWave();
         for (int i = 1; i < Spawners.Length; i++)
         {
             Spawners[i].SetActive(false);
@@ -35,12 +36,16 @@ public class WaveCounter : MonoBehaviour
 
     public void MaisSpawners()
     {
-        waveatual ++;
+        waveatual++;
         Spawners[waveatual].SetActive(true);
         foreach (GameObject obj in Spawners)
         {
             SpawnerEnemy se = obj.GetComponent<SpawnerEnemy>();
             se.IncreaseEnemies(eneplus);
+            if (se.gameObject.activeSelf)
+            {
+                se.ResetWave();
+            }
         }
     }
 }

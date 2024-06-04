@@ -26,6 +26,7 @@ public class WaveManager : MonoBehaviour
         currentWave = currentWave + 1;
         button.check = false;
         spawnerEnemy.GetComponent<SpawnerEnemy>().SpawnEnemy();
+      
         waveText.text = currentWave.ToString();
     }
 

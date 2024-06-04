@@ -54,7 +54,7 @@ public class PoisonTile : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {   
-        if(collision.CompareTag(Enemytag))
+        if(collision.CompareTag(Enemytag) && enabled)
         {
             Debug.LogError("Colidiu");
             eh = collision.GetComponent<EnemyHealth>();
