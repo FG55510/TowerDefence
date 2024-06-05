@@ -69,7 +69,6 @@ public class PoisonTile : MonoBehaviour
         if (collision.CompareTag(Enemytag))
         {
             eh = collision.GetComponent<EnemyHealth>();
-            eh.StopContinousDamage();
         }
     }
 

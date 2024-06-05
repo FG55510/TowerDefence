@@ -75,11 +75,6 @@ public class EnemyHealth : MonoBehaviour
         Invoke("ContinousDamage", 2);
     }
 
-    public void StopContinousDamage()
-    {
-        Debug.LogError("Stop");
-    }
-
     public void ResetHealth()
     {
         CurrentHealth = initialHealth;
