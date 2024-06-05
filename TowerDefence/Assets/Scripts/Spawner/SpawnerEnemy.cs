@@ -148,5 +148,5 @@ public class SpawnerEnemy : MonoBehaviour
 
 public static class Enemyfaltando{
     public static int quant;
-
+    public static int falt;
 }
