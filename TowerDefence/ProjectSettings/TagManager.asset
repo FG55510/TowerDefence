@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Enemy
   - Heroi
+  - Tower
+  - Enemy_Terrestre
   layers:
   - Default
   - TransparentFX
@@ -51,4 +53,7 @@ TagManager:
     locked: 0
   - name: Inimigos
     uniqueID: 3350332141
+    locked: 0
+  - name: UI
+    uniqueID: 1407696979
     locked: 0

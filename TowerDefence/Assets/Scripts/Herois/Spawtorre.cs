@@ -1,11 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using Unity.Mathematics;
 using Unity.VisualScripting;
 using UnityEngine;
 
+public enum TorreSpawn
+{
+    Fazendeira,
+    Mago,
+    Bardo
+}
+
 public class Spawtorre : MonoBehaviour
 {
+    public TorreSpawn _torreSpawn;
+
     public bool modoheroi;
 
     public bool modobardo;
@@ -17,7 +27,7 @@ public class Spawtorre : MonoBehaviour
 
     Camera cam;
     public LayerMask spawheroi;
-    public LayerMask spawtorre; 
+    public LayerMask spawtorre;
 
     public CompraDeHeroi compra;
 
@@ -29,6 +39,7 @@ public class Spawtorre : MonoBehaviour
         compra = GetComponent<CompraDeHeroi>();
         cam = Camera.main;
         modoheroi = false;
+        _torreSpawn = TorreSpawn.Mago;
         /*co = GetComponent<Collider2D>();
         largura = co.bounds.size.x/2;
         altura = co.bounds.size.y/2;*/
@@ -36,84 +47,95 @@ public class Spawtorre : MonoBehaviour
 
     // Update is called once per frame
 
-    void Update(){
-        if(Input.GetKeyDown(KeyCode.M)){
-            modobardo = !modobardo;
-        }
-        if(modobardo){
-            if (Input.GetMouseButtonDown(0)){
+    void Update()
+    {
 
-                RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero, math.INFINITY, spawtorre);
+        switch (_torreSpawn)
+        {
+            case (TorreSpawn.Fazendeira):
 
-                if(hit.collider)
+                if (Input.GetMouseButtonDown(0))
                 {
-                    check = compra.Checkprecobardo();
-                    if(check){
-                        hit.collider.gameObject.layer = LayerMask.NameToLayer("Ocupado");
-                        Instantiate(bardo, hit.collider.gameObject.transform.position, Quaternion.identity);
+
+                    RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero, math.INFINITY, spawheroi);
+
+                    if (hit.collider)
+                    {
+                        check = compra.Checkprecofazendeira();
+                        if (check)
+                        {
+                            hit.collider.gameObject.layer = LayerMask.NameToLayer("Ocupado");
+                            Instantiate(heroi, hit.collider.gameObject.transform.position, Quaternion.identity);
+
+                        }
+
                     }
-                    
+
                 }
-            }
-        }
-        else {
-        if (modoheroi){
-            if (Input.GetMouseButtonDown(0)){
+                break;
 
-                RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero, math.INFINITY, spawheroi);
-
-                if(hit.collider)
+            case (TorreSpawn.Bardo):
                 {
-                    check = compra.Checkprecofazendeira();
-                    if(check){
-                        hit.collider.gameObject.layer = LayerMask.NameToLayer("Ocupado");
-                    Instantiate(heroi, hit.collider.gameObject.transform.position, Quaternion.identity);
+                    if (Input.GetMouseButtonDown(0))
+                    {
+
+                        RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero, math.INFINITY, spawtorre);
+
+                        if (hit.collider)
+                        {
+                            check = compra.Checkprecobardo();
+                            if (check)
+                            {
+                                hit.collider.gameObject.layer = LayerMask.NameToLayer("Ocupado");
+                                Instantiate(bardo, hit.collider.gameObject.transform.position, Quaternion.identity);
+                            }
+
+                        }
                     }
-                    
                 }
-            }
-        }
-        if(!modoheroi){
-            if (Input.GetMouseButtonDown(0)){
+                    break;
 
-                RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero, math.INFINITY, spawtorre);
+                    case (TorreSpawn.Mago):
+                        {
+                            if (Input.GetMouseButtonDown(0))
+                            {
 
-                if(hit.collider)
-                {
-                    check = compra.Checkprecomago();
-                    if(check){
-                        hit.collider.gameObject.layer = LayerMask.NameToLayer("Ocupado");
-                    Instantiate(torre, hit.collider.gameObject.transform.position, Quaternion.identity);
+                                RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero, math.INFINITY, spawtorre);
+
+                                if (hit.collider)
+                                {
+                                    check = compra.Checkprecomago();
+                                    if (check)
+                                    {
+                                        hit.collider.gameObject.layer = LayerMask.NameToLayer("Ocupado");
+                                        Instantiate(torre, hit.collider.gameObject.transform.position, Quaternion.identity);
+                                    }
+                                    else
+                                    {
+                                        Debug.Log("Não deu");
+                                    }
+                                    //  Debug.Log ("Target Position: " + hit.collider.gameObject.transform.position);
+
+                                }
+                            }
+                    break;
                     }
-                    else{
-                        Debug.Log ("Não deu");
-                    }
-                  //  Debug.Log ("Target Position: " + hit.collider.gameObject.transform.position);
-                    
-                }
-
-            }
         }
-        }
-        
-        if(Input.GetKeyDown(KeyCode.Q)){
-            modoheroi = !modoheroi;
-        }
-        
     }
-       /* if (temtorre == false){
-            if(Input.GetKeyDown(KeyCode.Mouse0)){
-                mousepos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-                if(mousepos.x <= largura && mousepos.x >= -largura && mousepos.y <= altura && mousepos.y >= -altura){
-                    Instantiate(torre, transform.position, Quaternion.identity, tile.transform);
-                    temtorre = true;
-                }
 
-            }
-        }*/
+    public void ChangeToFazendeira()
+    {
+        _torreSpawn = TorreSpawn.Fazendeira;
+    }
 
+    public void ChangeToBardo()
+    {
+        _torreSpawn = TorreSpawn.Bardo;
+    }
 
-
-
+    public void ChangeToMago()
+    {
+        _torreSpawn = TorreSpawn.Mago;
+    }
 }
 
