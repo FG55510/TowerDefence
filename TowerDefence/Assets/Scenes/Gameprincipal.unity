@@ -3889,7 +3889,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameData: {fileID: 11400000, guid: 1083282db3652594987ad45618298acc, type: 2}
   playerSuprimentos: 3
-  playermoral: 700
+  playermoral: 500
   waveatual: 1
   state: {fileID: 0}
 --- !u!4 &1618231382
@@ -4948,8 +4948,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 0
+  m_fontSizeBase: 0
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
