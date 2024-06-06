@@ -22,7 +22,7 @@ public class GameManager : MonoBehaviour
 
     public int playerSuprimentos = 3;
 
-    public int playermoral = 700;
+    public int playermoral = 500;
 
     public int waveatual = 1;
 

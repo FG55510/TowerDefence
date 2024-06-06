@@ -12,18 +12,18 @@ public class UIManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        txtMoral.text = "Moral: 700";
-        txtSuplimentos.text = "Suplimentos: 3";
+        txtMoral.text = "500";
+        txtSuplimentos.text = "3";
     }
 
     public void MudarSuplimentos(int value)
     {
-        txtSuplimentos.text = "Suplimentos:" + value;
+        txtSuplimentos.text =  value.ToString();
     }
 
     public void MudarMoral(int value)
     {
-        txtMoral.text = "Moral:" + value;
+        txtMoral.text = value.ToString();
     }
 
     public void GameOver()
