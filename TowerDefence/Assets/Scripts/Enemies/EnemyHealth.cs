@@ -22,6 +22,8 @@ public class EnemyHealth : MonoBehaviour
     [SerializeField] private float initialHealth = 10f;
     [SerializeField] private float maxHealth = 10f;
 
+    public GameObject anime;
+    public TowerAnim tower;
     public float CurrentHealth { get; set; }
 
    // private Image _healthBar;
@@ -32,6 +34,7 @@ public class EnemyHealth : MonoBehaviour
        // CreateHealthBar();
         CurrentHealth = initialHealth;
         mlp = GetComponent <MudarLayerParent>();
+        tower = anime.GetComponent<TowerAnim>();
     }
 
     private void Update()
@@ -59,7 +62,9 @@ public class EnemyHealth : MonoBehaviour
         if (CurrentHealth <= 0)
         {
             CurrentHealth = 0;
+            tower.PlayDieAnim();
             if(tipo == Tipodeobjecto.Inimigo){
+                
                 Die();
             }
             else{

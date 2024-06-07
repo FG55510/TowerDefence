@@ -26,11 +26,15 @@ public class Heroi : MonoBehaviour
 
     public float sps;
 
+    public GameObject anime;
+    public TowerAnim tower;
+
     // Start is called before the first frame update
     void Start()
     {
         Inimigos = LayerMask.NameToLayer("Inimigos");
         InvokeRepeating("UpdateTarget", 0f, 0.5f);
+        tower = anime.GetComponent<TowerAnim>();
     }
 
     void UpdateTarget ()
@@ -95,7 +99,9 @@ public class Heroi : MonoBehaviour
     }
 
     public void Shoot(){
-       GameObject bala = Instantiate(GoBullet, transform.position, Quaternion.identity);
+
+        tower.PlayAttackAnim();
+        GameObject bala = Instantiate(GoBullet, transform.position, Quaternion.identity);
        Bullet tiro = bala.GetComponent<Bullet>();
 
        if(tiro != null){

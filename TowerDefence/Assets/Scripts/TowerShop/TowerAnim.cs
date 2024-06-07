@@ -19,14 +19,19 @@ public class TowerAnim : MonoBehaviour
         _towerHealth = GetComponent<EnemyHealth>();
 
     }
-    private void PlayAttackAnim()
+    public void PlayAttackAnim()
     {
         _animator.SetTrigger("Attack");
     }
 
-    private void PlayDieAnim()
+    public void PlayDieAnim()
     {
         _animator.SetTrigger("Die");
+    }
+
+    public void StopAttackAnim() {
+        _animator.SetTrigger("Idle");
+    
     }
 
     private float GetCurrentAnimationLenght()
@@ -35,7 +40,7 @@ public class TowerAnim : MonoBehaviour
         return animationLenght;
     }
 
-    private IEnumerator PlayDead()
+    public IEnumerator PlayDead()
     {
         PlayDieAnim();
         yield return new WaitForSeconds(GetCurrentAnimationLenght() + 0.3f);

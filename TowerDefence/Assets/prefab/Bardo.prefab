@@ -70,8 +70,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1467391823
+  m_SortingLayer: 1
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: ee5b190b54439cd479615acb5aa8d397, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -186,7 +186,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d486067f39df6ad439a4e9cdf9e36eeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moralgerada: 100
+  moralgerada: 50
   Tempoparagerar: 5
   tpg: 0
 --- !u!61 &-7774248976195582237
@@ -248,8 +248,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mlp: {fileID: 0}
   tipo: 0
-  initialHealth: 10
-  maxHealth: 10
+  initialHealth: 280
+  maxHealth: 280
+  anime: {fileID: 4443063162675822102}
+  tower: {fileID: 0}
 --- !u!114 &8340552486263004601
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -355,8 +357,29 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1740700323340259513, guid: c91d5efc8d0bfeb4688839fb00a07c08, type: 3}
       insertIndex: -1
       addedObject: {fileID: 8604318901776593425}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7018596916877705289, guid: c91d5efc8d0bfeb4688839fb00a07c08, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7512634927044131185}
   m_SourcePrefab: {fileID: 100100000, guid: c91d5efc8d0bfeb4688839fb00a07c08, type: 3}
+--- !u!1 &4443063162675822102 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7018596916877705289, guid: c91d5efc8d0bfeb4688839fb00a07c08, type: 3}
+  m_PrefabInstance: {fileID: 6687844150669196895}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7512634927044131185
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4443063162675822102}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09a1d2fbbe7ac194199088fc4a5523fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delayBtwAttack: 0
 --- !u!4 &4965160774366736102 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1740700323340259513, guid: c91d5efc8d0bfeb4688839fb00a07c08, type: 3}

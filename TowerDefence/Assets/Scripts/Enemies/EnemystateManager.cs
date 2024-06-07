@@ -32,8 +32,10 @@ public class EnemystateManager : MonoBehaviour
     public LayerMask Torres;
 
     public bool miraativa = false;
-    
-    
+    public GameObject anime;
+    public TowerAnim tower;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -41,6 +43,7 @@ public class EnemystateManager : MonoBehaviour
         ataque = GetComponent<EnemyRangeAttack>();
         Gtt = GetComponent<GoToTower>();
         estado = EstadoEnemy.FollowPath;
+        tower = anime.GetComponent<TowerAnim>();
     }
 
     // Update is called once per frame
@@ -94,6 +97,7 @@ public class EnemystateManager : MonoBehaviour
             ataque.enabled = true;
             Gtt.enabled = false;
             ataque.SetTarget(target);
+            tower.PlayAttackAnim();
             break;
         
         
