@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &2805326062090139595
+--- !u!1001 &1248241546945667991
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -10,11 +10,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1047152315280173323, guid: a0053d502867be84493bdb9eab2b10af, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.315568
+      value: -4.7153964
       objectReference: {fileID: 0}
     - target: {fileID: 1047152315280173323, guid: a0053d502867be84493bdb9eab2b10af, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -8.09388
+      value: -6.059109
       objectReference: {fileID: 0}
     - target: {fileID: 1047152315280173323, guid: a0053d502867be84493bdb9eab2b10af, type: 3}
       propertyPath: m_LocalPosition.z
@@ -52,9 +52,13 @@ PrefabInstance:
       propertyPath: dano
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 2819576465060694213, guid: a0053d502867be84493bdb9eab2b10af, type: 3}
+      propertyPath: enemylayer.m_Bits
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5292504906733427949, guid: a0053d502867be84493bdb9eab2b10af, type: 3}
       propertyPath: m_Name
-      value: BalaEnemyInvisivel Variant
+      value: BalaEnemySlimeInvisivel Variant 1
       objectReference: {fileID: 0}
     - target: {fileID: 5594695564839983188, guid: a0053d502867be84493bdb9eab2b10af, type: 3}
       propertyPath: m_Enabled

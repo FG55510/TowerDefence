@@ -212,10 +212,10 @@ MonoBehaviour:
   range: 3.5
   Torres:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 8448
   miraativa: 0
   anime: {fileID: 1060583846125121213}
-  tower: {fileID: 0}
+  tower: {fileID: 7691457545602124029}
 --- !u!114 &7674643438322165806
 MonoBehaviour:
   m_ObjectHideFlags: 0

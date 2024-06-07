@@ -16,6 +16,14 @@ PrefabInstance:
       propertyPath: anime
       value: 
       objectReference: {fileID: 3133476392983818927}
+    - target: {fileID: 38404165054735188, guid: f5cd4748b95bf264a8b9faf5c6a93a00, type: 3}
+      propertyPath: tower
+      value: 
+      objectReference: {fileID: 2390721600784537829}
+    - target: {fileID: 38404165054735188, guid: f5cd4748b95bf264a8b9faf5c6a93a00, type: 3}
+      propertyPath: Torres.m_Bits
+      value: 8448
+      objectReference: {fileID: 0}
     - target: {fileID: 633742743886274384, guid: f5cd4748b95bf264a8b9faf5c6a93a00, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
@@ -79,11 +87,15 @@ PrefabInstance:
     - target: {fileID: 5389628870563433774, guid: f5cd4748b95bf264a8b9faf5c6a93a00, type: 3}
       propertyPath: tower
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2390721600784537829}
     - target: {fileID: 6098043289844986707, guid: f5cd4748b95bf264a8b9faf5c6a93a00, type: 3}
       propertyPath: m_Name
       value: InimigoVoador
       objectReference: {fileID: 0}
+    - target: {fileID: 7674643438322165806, guid: f5cd4748b95bf264a8b9faf5c6a93a00, type: 3}
+      propertyPath: GoBullet
+      value: 
+      objectReference: {fileID: 8042377918604421926, guid: b7b55e18edff11e42ab5aa37d8437c23, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 9147999632535962458, guid: f5cd4748b95bf264a8b9faf5c6a93a00, type: 3}
