@@ -54,7 +54,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2819576465060694213, guid: a0053d502867be84493bdb9eab2b10af, type: 3}
       propertyPath: enemylayer.m_Bits
-      value: 0
+      value: 8192
       objectReference: {fileID: 0}
     - target: {fileID: 5292504906733427949, guid: a0053d502867be84493bdb9eab2b10af, type: 3}
       propertyPath: m_Name
