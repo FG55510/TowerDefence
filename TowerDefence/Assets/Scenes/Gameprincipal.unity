@@ -584,7 +584,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1562a5f35425e474fa7948282752dd71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myButton: {fileID: 0}
+  myButton: {fileID: 891061969}
   check: 0
 --- !u!4 &256080416
 Transform:
@@ -2293,7 +2293,7 @@ MonoBehaviour:
   minRandomDelay: 5
   maxRandomDelay: 10
   waveManager: {fileID: 0}
-  final: 0
+  final: 1
 --- !u!114 &1151487485
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3254,7 +3254,7 @@ MonoBehaviour:
   minRandomDelay: 5
   maxRandomDelay: 10
   waveManager: {fileID: 0}
-  final: 0
+  final: 1
 --- !u!114 &1410642459
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3750,7 +3750,7 @@ MonoBehaviour:
   minRandomDelay: 10
   maxRandomDelay: 15
   waveManager: {fileID: 0}
-  final: 0
+  final: 1
 --- !u!114 &1609036443
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3892,6 +3892,16 @@ MonoBehaviour:
   playermoral: 500
   waveatual: 1
   state: {fileID: 0}
+  readynext: 1
+  Spawners:
+  - {fileID: 552754151}
+  - {fileID: 2020342754}
+  - {fileID: 1410642458}
+  - {fileID: 1151487484}
+  - {fileID: 2036407948}
+  - {fileID: 1609036442}
+  contagem: 0
+  condition: 1
 --- !u!4 &1618231382
 Transform:
   m_ObjectHideFlags: 0
@@ -4144,6 +4154,14 @@ PrefabInstance:
     - target: {fileID: 499563685430896704, guid: e53d1b5acb2e2c64d933d0189236d19d, type: 3}
       propertyPath: m_Color.r
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 880416117198731955, guid: e53d1b5acb2e2c64d933d0189236d19d, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 12.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 880416117198731955, guid: e53d1b5acb2e2c64d933d0189236d19d, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 17.54
       objectReference: {fileID: 0}
     - target: {fileID: 2501271213029079474, guid: e53d1b5acb2e2c64d933d0189236d19d, type: 3}
       propertyPath: m_Name
@@ -4575,7 +4593,7 @@ MonoBehaviour:
   minRandomDelay: 5
   maxRandomDelay: 10
   waveManager: {fileID: 0}
-  final: 0
+  final: 1
 --- !u!114 &2020342755
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4684,7 +4702,7 @@ MonoBehaviour:
   minRandomDelay: 10
   maxRandomDelay: 15
   waveManager: {fileID: 0}
-  final: 0
+  final: 1
 --- !u!114 &2036407949
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5262,6 +5280,14 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 880416117198731955, guid: e53d1b5acb2e2c64d933d0189236d19d, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 12.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 880416117198731955, guid: e53d1b5acb2e2c64d933d0189236d19d, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 17.54
+      objectReference: {fileID: 0}
     - target: {fileID: 2501271213029079474, guid: e53d1b5acb2e2c64d933d0189236d19d, type: 3}
       propertyPath: m_Name
       value: Suplimentos
@@ -5412,6 +5438,14 @@ PrefabInstance:
     - target: {fileID: 499563685430896704, guid: e53d1b5acb2e2c64d933d0189236d19d, type: 3}
       propertyPath: m_Color.r
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 880416117198731955, guid: e53d1b5acb2e2c64d933d0189236d19d, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 12.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 880416117198731955, guid: e53d1b5acb2e2c64d933d0189236d19d, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 17.54
       objectReference: {fileID: 0}
     - target: {fileID: 2501271213029079474, guid: e53d1b5acb2e2c64d933d0189236d19d, type: 3}
       propertyPath: m_Name

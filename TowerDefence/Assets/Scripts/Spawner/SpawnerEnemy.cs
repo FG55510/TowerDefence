@@ -33,12 +33,12 @@ public class SpawnerEnemy : MonoBehaviour
     private WayPoint _waypoint;
     public WaveManager waveManager;
 
-    public bool final = false;
+    public bool final = true;
     
 
     private void Start()
     {
-       
+       final = false;
         //Enemyfaltando.quant += enemyCount;
         //_enemiesRemaining = Enemyfaltando.quant;
         _pooler = GetComponent<ObjectPooler>();
@@ -57,6 +57,7 @@ public class SpawnerEnemy : MonoBehaviour
             _spawnTimer = GetSpawnDelay();
             if (_enemiesSpawned < enemyCount)
             {
+                final = false;
                 _enemiesSpawned++;
                 SpawnEnemy();
             }
@@ -118,12 +119,12 @@ public class SpawnerEnemy : MonoBehaviour
 
     private void RecordEnemy()
     {
-        Enemyfaltando.quant--;
-        _enemiesRemaining = Enemyfaltando.quant;
-        if (Enemyfaltando.quant == 0) 
+        _enemiesRemaining--;
+
+        if (_enemiesRemaining == 0) 
         {
             final = true;
-            //waveManager.CheckDefeatedEnemies();
+            waveManager.CheckDefeatedEnemies();
             //StartCoroutine(NextWave());
         }
     }

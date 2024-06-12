@@ -32,7 +32,7 @@ public class WaveManager : MonoBehaviour
 
     public void CheckDefeatedEnemies()
     {
-        if (AllEnemiesDefeated())
+        if (GameManager.Instance.Nextwave())
         {
             button.check = true;
         }

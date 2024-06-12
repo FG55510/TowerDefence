@@ -231,9 +231,13 @@ PrefabInstance:
       value: InimigoGrande1 Variant
       objectReference: {fileID: 0}
     - target: {fileID: 7674643438322165806, guid: f5cd4748b95bf264a8b9faf5c6a93a00, type: 3}
+      propertyPath: sps
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7674643438322165806, guid: f5cd4748b95bf264a8b9faf5c6a93a00, type: 3}
       propertyPath: GoBullet
       value: 
-      objectReference: {fileID: 8042377918604421926, guid: b7b55e18edff11e42ab5aa37d8437c23, type: 3}
+      objectReference: {fileID: 6350185671479476090, guid: fbc594c331ec8774eb611857ad7ad5d3, type: 3}
     - target: {fileID: 8717003043326235147, guid: f5cd4748b95bf264a8b9faf5c6a93a00, type: 3}
       propertyPath: m_Enabled
       value: 0

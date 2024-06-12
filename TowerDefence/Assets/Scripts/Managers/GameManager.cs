@@ -30,9 +30,16 @@ public class GameManager : MonoBehaviour
 
     private UIManager ui;
 
-    public bool readynext;
 
-    private SpawnerEnemy[] Spawners;
+
+
+    public bool readynext= true;
+
+    public SpawnerEnemy[] Spawners;
+
+    public int contagem = 0;
+
+    public bool condition = true;
 
     // Start is called before the first frame update
     void Start()
@@ -74,9 +81,24 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void Nextwave()
+    public bool Nextwave()
     {
+        foreach(SpawnerEnemy se in Spawners)
+        {
 
+            if (se.final == false)
+            {
+                readynext = false;
+            }
+            else if (contagem >= Spawners.Length && readynext == true)
+            {
+                readynext=true;
+            }
+            contagem++;
+        }
+        condition = readynext;
+        readynext = true;
+        return condition;
     }
 
     public void StopHeroes()

@@ -231,7 +231,7 @@ MonoBehaviour:
   target: {fileID: 0}
   arma: {fileID: 1487987528105124391}
   firetime: 0
-  sps: 1
+  sps: 0.4
   GoBullet: {fileID: 5292504906733427949, guid: a0053d502867be84493bdb9eab2b10af, type: 3}
 --- !u!114 &8717003043326235147
 MonoBehaviour:
@@ -245,7 +245,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b5cae25e0719f84fa9f82db60af7753, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 3
   target: {fileID: 0}
   ESM: {fileID: 0}
   state: 1
