@@ -251,7 +251,7 @@ MonoBehaviour:
   initialHealth: 280
   maxHealth: 280
   anime: {fileID: 4443063162675822102}
-  tower: {fileID: 0}
+  tower: {fileID: 7512634927044131185}
 --- !u!114 &8340552486263004601
 MonoBehaviour:
   m_ObjectHideFlags: 0

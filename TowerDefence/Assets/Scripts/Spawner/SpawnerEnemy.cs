@@ -63,12 +63,6 @@ public class SpawnerEnemy : MonoBehaviour
         }
     }
 
-    public void SpawCommand()
-    {
-        //StartCoroutine(NextWave());
-        //_button.check = false;
-    }
-
     public void SpawnEnemy()
     {
         GameObject newInstance = _pooler.GetInstanceFromPool();
@@ -116,7 +110,8 @@ public class SpawnerEnemy : MonoBehaviour
     public void ResetWave()
     {
         Enemyfaltando.quant += enemyCount;
-        _enemiesRemaining = Enemyfaltando.quant;
+        // _enemiesRemaining = Enemyfaltando.quant;
+        _enemiesRemaining = enemyCount;
         _spawnTimer = 0f;
         _enemiesSpawned = 0;
     }
@@ -128,7 +123,7 @@ public class SpawnerEnemy : MonoBehaviour
         if (Enemyfaltando.quant == 0) 
         {
             final = true;
-            waveManager.CheckDefeatedEnemies();
+            //waveManager.CheckDefeatedEnemies();
             //StartCoroutine(NextWave());
         }
     }

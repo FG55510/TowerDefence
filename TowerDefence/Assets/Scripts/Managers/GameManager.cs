@@ -30,6 +30,10 @@ public class GameManager : MonoBehaviour
 
     private UIManager ui;
 
+    public bool readynext;
+
+    private SpawnerEnemy[] Spawners;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -68,6 +72,11 @@ public class GameManager : MonoBehaviour
         else{
             return false;
         }
+    }
+
+    public void Nextwave()
+    {
+
     }
 
     public void StopHeroes()
