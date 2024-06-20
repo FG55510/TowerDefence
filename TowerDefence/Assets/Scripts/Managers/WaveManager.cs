@@ -6,7 +6,7 @@ using TMPro;
 
 public class WaveManager : MonoBehaviour
 {
-    public int currentWave = 0;
+    public int currentWave = 1;
     public TMP_Text waveText;
 
     public WaveCounter waveCounter;
